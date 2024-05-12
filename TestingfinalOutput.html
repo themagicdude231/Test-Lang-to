@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Test Lang To :)</title>
+<link rel="icon" href="icon.jpg" sizes="16x16" type="image/jpg">
+</head>
+<style>
+body { 
+  color: black;
+  font-family: sans-serif;
+  margin: 0;
+  overflow-y: scroll;
+}
+/* for navigator */
+nav{
+  position: fixed;
+  background: white;
+  width: 100%;
+  height: 50px;
+  padding: 30px;
+  box-shadow: 0 0 10px black; 
+  z-index: 1;
+}
+#WebName {
+    font-weight: bold;	
+	font-size: 30px;
+	margin-top: -25px;
+	margin-left: 100px;
+	text-align: center;
+	position: fixed;
+	font-family: Garamond;
+}
+sup {
+    font-size: 10px;
+}
+#logo {
+	margin-top:-10px;
+	margin-left: 10px;
+	text-align: center;
+	position: fixed;
+}
+#pic {
+    height: 65px;
+	width: 65px;
+}
+#NavList ol {
+  position: fixed;
+  margin-top: 15px;
+  display: inline-flex;
+  list-style: none;
+}
+#NavList ol li {
+  margin-left: 80px; 
+  max-width: 100%;
+}
+#NavList ol li a {
+  font-size: 15px;
+  font-weight: bold;
+  padding: 0;
+  white-space: nowrap;
+  padding: 10px;
+}
+#NavList ol li a:hover {
+    background-color: black;
+	color: white;
+	height: 150px;
+	width: 250px;
+	border-radius: 50px;
+}
+#NavList ol li a:active {
+    background-color: red;
+	color: white;
+	height: 150px;
+	width: 250px;
+	border-radius: 50px;
+}
+#NavList ol li:first-child {
+  margin-left: 950px;
+}
+/* for product and service */
+#Products2 {
+    position: absolute;
+    margin-top: -450px;
+    margin-left: -25px;
+	white-space: nowrap;
+}
+/* for about us and contact us */
+#Box {
+    position: absolute;
+    margin-top: 265px;
+    margin-left: 700px;
+    transform: translateX(10%);
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    width: 450px;
+    height: 475px;
+    z-index: -1;
+	box-shadow: 0 0 10px black;
+}
+#MyPic {
+    height: 125px;
+	width: 125px;
+	border-radius: 100px;
+	margin-top: 15px;
+	margin-left: 160px;
+	box-shadow: 0 0 10px black;
+}
+#Background {
+    background: linear-gradient(to right, #FFFFFF, #FFFF00, #87CEEB, #FF69B4);
+	height: 235px;
+	width: 450px;
+	border-radius: 50px;
+	border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+#AboutTitle {
+    text-align: center;
+	font-weight: bold;
+	font-size: 20px;
+}
+#Name {
+    text-align: center;
+	margin-bottom: 5px;
+}
+table {
+    margin-left: 25px;
+	margin-top: 20px;
+}
+#Info {
+    font-weight: bold;
+}
+/* for cart */
+/* for Featured Images */
+#Gallery {
+    position: absolute;
+    margin-top: 165px;
+    margin-left: 700px;
+    transform: translateX(-30%);	
+	z-index: -1;
+} 
+#GallerySlider {
+	display: inline-flex;
+}
+label {
+    height: 450px;
+    width: 100px;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 30px;
+    margin-left: 30px;
+    transition: .6s ease-in-out;
+    box-shadow: 0 0 15px black;
+}
+img {
+    height: 450px;
+	width: 600px;
+}
+input {
+    display: none;
+}
+input:checked + label {
+    width: 600px;
+}
+/* for products */
+#ProductTitle {
+    position: absolute;
+    margin-top: 665px;
+    margin-left: 700px; 
+    transform: translateX(100%);
+    z-index: 1;
+	font-weight: bold;
+	font-size: 30px;
+}
+#Product1 {
+	position: absolute;
+    margin-top: 765px;
+    margin-left: 700px;
+    transform: translateX(-170%);	
+    height: 400px;
+	width: 300px;
+	background-color: white;
+	box-shadow: 0 0 15px black;
+	border-radius: 25px;
+}
+#Product2 {
+	position: absolute;
+    margin-top: 765px;
+    margin-left: 700px;
+    transform: translateX(-30%);	
+    height: 400px;
+	width: 300px;
+	background-color: white;
+	box-shadow: 0 0 15px black;
+	border-radius: 25px;
+}
+#Product3 {
+	position: absolute;
+    margin-top: 765px;
+    margin-left: 700px;
+    transform: translateX(110%);	
+    height: 400px;
+	width: 300px;
+	background-color: white;
+	box-shadow: 0 0 15px black;
+	border-radius: 25px;
+}
+#Product4 {
+	position: absolute;
+    margin-top: 765px;
+    margin-left: 700px;
+    transform: translateX(250%);	
+    height: 400px;
+	width: 300px;
+	background-color: white;
+	box-shadow: 0 0 15px black;
+	border-radius: 25px;
+}
+#Product1Img {
+	position: absolute;
+    margin-top: 50px;
+    margin-left: 700px;
+    transform: translateX(-325%);	
+}
+#Product1Img img {
+    height: 150px;
+	width: 200px;
+}
+#Product1Name {
+    margin-top: 250px;
+	margin-left: 4px;
+	text-align: center;
+	font-weight: bold;
+}
+#PriceP1 {
+    text-align: center;
+	margin-top: 20px;
+}
+#BuyBtn {
+	margin-left: 100px;
+	margin-top: 20px;
+	color: white;
+	background-color: black;
+	height: 50px;
+	width: 100px;
+	border-radius: 50px;
+	border: 5px solid black;
+}
+#BuyBtn:hover {
+    background-color: white;
+	color: black;
+	border: 5px solid white;
+}
+#BuyBtn:active {
+    background-color: red;
+	color: white;
+	border: 5px solid red;
+}
+/* for buying product */
+#Rectangle {
+    position: absolute;
+    margin-top: 200px;
+    margin-left: 395px;
+    transform: translateX(10%);
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    width: 975px;
+    height: 575px;
+    z-index: -1;
+	box-shadow: 0 0 10px black;
+}
+#ProdImg {
+	position: absolute;
+    margin-top: 150px;
+    margin-left: 1350px;
+    transform: translateX(-325%);	
+}
+#ProdImg img {
+    height: 250px;
+	width: 400px;
+}
+#ProdName {
+    margin-left: 550px;
+	margin-top: 100px;
+	font-weight: bold;
+	font-size: 20px;
+}
+#Price {
+    margin-left: 550px;
+	margin-top: 40px;
+	font-weight: bold;
+	font-size: 20px;  
+}
+#Specification {
+    margin-left: 550px;
+	margin-top: 40px;
+	font-weight: bold;
+	font-size: 20px;  
+}
+#Specification2 {
+    margin-left: 550px;
+	margin-top: 10px;
+	font-size: 15px;  
+}
+#AddToCartBtn {
+    margin-left: 100px;
+	margin-top: 40px;
+	color: white;
+	background-color: black;
+	height: 50px;
+	width: 100px;
+	border-radius: 50px;
+	border: 5px solid black;
+}
+#AddToCartBtn:hover {
+    background-color: white;
+	color: black;
+	border: 5px solid white;
+}
+#AddToCartBtn:active {
+    background-color: red;
+	color: white;
+	border: 5px solid red;
+}
+/* for add to cart */
+#Cart {
+	position: fixed;
+    margin-top: 165px;
+    margin-left: 225px; 
+    transform: translateX(100%);
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 1; 
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 450px;
+    height: 675px;
+	box-shadow: 0 0 10px black;
+}
+h1 {
+    margin-left: 60px;
+}
+#CartItems {
+    margin-top: 10px;
+}
+.CartItem {
+    margin-bottom: 7px;
+    padding: 7px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.CartItem img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+#BuyAllbtn {
+    margin-left: 100px;
+	margin-top: 25px;
+	color: white;
+	background-color: black;
+	height: 50px;
+	width: 100px;
+	border-radius: 50px;
+	border: 5px solid black;
+}
+#BuyAllbtn:hover {
+    background-color: white;
+	color: black;
+	border: 5px solid white;
+}
+#BuyAllbtn:active {
+    background-color: red;
+	color: white;
+	border: 5px solid red;
+}
+#ClearAll {
+    margin-left: 250px;
+	transform: translateY(-100%);
+	color: white;
+	background-color: black;
+	height: 50px;
+	width: 100px;
+	border-radius: 50px;
+	border: 5px solid black;
+}
+#ClearAll:hover {
+    background-color: white;
+	color: black;
+	border: 5px solid white;
+}
+#ClearAll:active {
+    background-color: red;
+	color: white;
+	border: 5px solid red;
+}
+</style>
+<body>
+<!-- the nav of the website -->
+<nav>
+<div id="logo"><img id="pic" src="icon.jpg"></div>
+<div id="WebName"><p>E-Sheesh<sup>TM</sup></p></div>
+<div id="NavList">
+<ol>
+<li><a onclick="openHome()">Home</a></li>
+<li><a onclick="openProdSer()">Product/Service</a></li>
+<li><a onclick="openAbtUs()">About Us</a></li>
+<li><a onclick="openContUs()">Contact Us</a></li>
+<li><a onclick="openCart()">Your Cart</a></li>
+</ol>
+</div>
+</nav>
+<!-- the content of the main page -->
+<!-- the carousel -->
+<div id="Gallery">
+<div id="GallerySlider">
+<input type="radio" name="slide" id="c1" checked>
+<label for="c1">
+<img src="featured1.jpg">
+</label>
+<input type="radio" name="slide" id="c2" >
+<label for="c2">
+<img src="featured2.jpg">
+</label>
+<input type="radio" name="slide" id="c3" >
+<label for="c3">
+<img src="featured3.jpg">
+</label>
+<input type="radio" name="slide" id="c4" >
+<label for="c4">
+<img src="featured4.jpg">
+</label>
+<input type="radio" name="slide" id="c5" >
+<label for="c5">
+<img src="featured5.jpg">
+</label>
+</div>
+</div>
+<!-- the products -->
+<div id="Products">
+<div id="ProductTitle">Our Product</div>
+<div id="Product1">
+<div id="Product1Img"><img src="product1img.jpg"></div>
+<div id="Product1Name">OMEN 15-DC1115tx Gaming Laptop</div>
+<div id="PriceP1">900 $</div>
+<button id="BuyBtn" onclick="openBuy1()">Buy Now</button>
+</div>
+<div id="Product2">
+<div id="Product1Img"><img src="product2img.jpg"></div>
+<div id="Product1Name">MSI GF63 9SC -092PH Red Backlit KB</div>
+<div id="PriceP1">750 $</div>
+<button id="BuyBtn" onclick="openBuy2()">Buy Now</button>
+</div>
+<div id="Product3">
+<div id="Product1Img"><img src="product3img.jpg"></div>
+<div id="Product1Name">G PRO Mechanical Gaming Keyboard</div>
+<div id="PriceP1">500 $</div>
+<button id="BuyBtn" onclick="openBuy3()">Buy Now</button>
+</div>
+<div id="Product4">
+<div id="Product1Img"><img src="product4img.jpg"></div>
+<div id="Product1Name">Razer DeathAdder V3 Pro Wireless</div>
+<div id="PriceP1">650 $</div>
+<button id="BuyBtn" onclick="openBuy4()">Buy Now</button>
+</div>
+</div>
+<!-- for if buy now is press  -->
+<div id="BuyProduct1" style="display: none;">
+<div id="Rectangle">
+<div id="ProdImg"><img src="product1img.jpg"></div>
+<div id="ProdName">OMEN 15-DC1115tx Gaming Laptop</div>
+<div id="Price">Price: 900 $</div>
+<div id="Specification">Specs</div>
+<div id="Specification2"> - Intel Core i7-9750H (9th Gen)<br>
+-  NVIDIA GeForce RTX 2060 6GB VRAM<br>
+- 16 GB DDR4-2666 SDRAM<br>
+- 1 TB HDD 7200 rpm and 256 GB PCIe NVMe M.2 SSD
+<button id="AddToCartBtn" onclick="addToCart('OMEN 15-DC1115tx Gaming Laptop', 900, 'product1img.jpg')"> Add to Cart </button>
+</div>
+</div>
+</div>
+<div id="BuyProduct2" style="display: none;">
+<div id="Rectangle">
+<div id="ProdImg"><img src="product2img.jpg"></div>
+<div id="ProdName">MSI GF63 9SC -092PH Red Backlit KB</div>
+<div id="Price">Price: 750 $</div>
+<div id="Specification">Specs</div>
+<div id="Specification2"> - Intel Core i5-9300H (9th Gen) Quad-core processor<br>
+-  NVIDIA GeForce GTX 1650 4 GB VRAM<br>
+- 8 GB DDR4-2666 MHz RAM<br>
+- 1 TB HDD 7200 rpm and 256 GB PCIe NVMe M.2 SSD
+<button id="AddToCartBtn" onclick="addToCart('MSI GF63 9SC -092PH Red Backlit KB', 750, 'product2img.jpg')"> Add to Cart </button>
+</div>
+</div>
+</div>
+<div id="BuyProduct3" style="display: none;">
+<div id="Rectangle">
+<div id="ProdImg"><img src="product3img.jpg"></div>
+<div id="ProdName">G PRO Mechanical Gaming Keyboard</div>
+<div id="Price">Price: 500 $</div>
+<div id="Specification">Specs</div>
+<div id="Specification2"> - Romer-G mechanical switches<br>
+- Durable PBT (Polybutylene terephthalate) keycaps<br>
+- Customizable per-key RGB lighting<br>
+- Tenkeyless design for compactness and portability
+<button id="AddToCartBtn" onclick="addToCart('G PRO Mechanical Gaming Keyboard', 500, 'product3img.jpg')"> Add to Cart </button>
+</div>
+</div>
+</div>
+<div id="BuyProduct4" style="display: none;">
+<div id="Rectangle">
+<div id="ProdImg"><img src="product4img.jpg"></div>
+<div id="ProdName">Razer DeathAdder V3 Pro Wireless</div>
+<div id="Price">Price: 650 $</div>
+<div id="Specification">Specs</div>
+<div id="Specification2"> - Wireless (2.4 GHz Razer HyperSpeed)<br>
+- True 20,000 DPI sensitivity<br>
+- 8 programmable buttons<br>
+- Up to 70 hours of battery life on a single charge
+<button id="AddToCartBtn" onclick="addToCart('Razer DeathAdder V3 Pro Wireless', 650, 'product4img.jpg')"> Add to Cart </button>
+</div>
+</div>
+</div>
+<!-- product and serevice -->
+<div id="ProdServ" style="display: none;">
+<div id="Products2">
+<div id="ProductTitle">We sell these:</div>
+<div id="Product1">
+<div id="Product1Img"><img src="product1img.jpg"></div>
+<div id="Product1Name">OMEN 15-DC1115tx Gaming Laptop</div>
+<div id="PriceP1">900 $</div>
+<button id="BuyBtn" onclick="openBuy5()">Buy Now</button>
+</div>
+<div id="Product2">
+<div id="Product1Img"><img src="product2img.jpg"></div>
+<div id="Product1Name">MSI GF63 9SC -092PH Red Backlit KB</div>
+<div id="PriceP1">750 $</div>
+<button id="BuyBtn" onclick="openBuy6()">Buy Now</button>
+</div>
+<div id="Product3">
+<div id="Product1Img"><img src="product3img.jpg"></div>
+<div id="Product1Name">G PRO Mechanical Gaming Keyboard</div>
+<div id="PriceP1">500 $</div>
+<button id="BuyBtn" onclick="openBuy7()">Buy Now</button>
+</div>
+<div id="Product4">
+<div id="Product1Img"><img src="product4img.jpg"></div>
+<div id="Product1Name">Razer DeathAdder V3 Pro Wireless</div>
+<div id="PriceP1">650 $</div>
+<button id="BuyBtn" onclick="openBuy8()">Buy Now</button>
+</div>
+</div>
+</div>
+<!-- about us -->
+<div id="AbtUs" style="display: none;">
+<div id="Box">
+<div id="Background">
+<img id="MyPic" src="icon.jpg">
+<p id="AboutTitle">About Website</p>
+<p id="Name">E-Sheesh<sup>TM</p>
+</div>
+<table>
+<tr>
+<td><p id="StudentInfoLB">E-Sheesh<sup>TM</sup> is an E-commerce website that selling<br> gaming products. from laptops, keyboards, to other products
+E-Sheesh<sup>TM</sup> is the one that you can rely on<br> we also provide 5% discount on your purchase</p></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- Contact Us -->
+<div id="ContUs" style="display: none;">
+<div id="Box">
+<div id="Background">
+<img id="MyPic" src="icon.jpg">
+<p id="AboutTitle">Sebastian Vosotros</p>
+<p id="Name">Director of Feedback department at E-Sheesh<sup>TM</sup></p>
+</div>
+<table>
+<tr>
+<td><p id="Info">Company Email:</p></td>
+<td><p>ESheeshEcom@gmail.com.ph</p></td>
+</tr>
+<tr>
+<td><p id="Info">Company Number:</p></td>
+<td><p>555-1329</p></td>
+</tr>
+<tr>
+<td><p id="Info">Company Adress:</p></td>
+<td><p>123 Park Streetwise street Avenue</p></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- Cart -->
+<div id="Cart" style="display: none;">
+<h1>Your Shopping Cart</h1>
+<div id="CartItems"></div>
+<button id="BuyAllbtn" onclick="openBuy()">Buy All</button>
+<button id="ClearAll" onclick="openClear()">Clear All</button>
+</div>
+<script>
+// for the carousel
+const radios = document.querySelectorAll('input[name="slide"]');
+let currentIndex = 0;
+function toggleRadio() {
+    radios[currentIndex].checked = true;
+    currentIndex = (currentIndex + 1) % radios.length;
+}
+setInterval(toggleRadio, 3000);
+// for nav
+function openHome() {
+    document.getElementById('Gallery').style.display = 'block';
+    document.getElementById('Products').style.display = 'block';
+    document.getElementById('ProdServ').style.display = 'none';
+	document.getElementById('AbtUs').style.display = 'none';
+	document.getElementById('ContUs').style.display = 'none';
+	document.getElementById('Cart').style.display = 'none';
+	document.getElementById('BuyProduct1').style.display = 'none';
+	document.getElementById('BuyProduct2').style.display = 'none';
+	document.getElementById('BuyProduct3').style.display = 'none';
+	document.getElementById('BuyProduct4').style.display = 'none';
+}
+function openProdSer() {
+    document.getElementById('Gallery').style.display = 'none';
+    document.getElementById('Products').style.display = 'none';
+    document.getElementById('ProdServ').style.display = 'block';
+	document.getElementById('AbtUs').style.display = 'none';
+	document.getElementById('ContUs').style.display = 'none';
+	document.getElementById('Cart').style.display = 'none';
+	document.getElementById('BuyProduct1').style.display = 'none';
+	document.getElementById('BuyProduct2').style.display = 'none';
+	document.getElementById('BuyProduct3').style.display = 'none';
+	document.getElementById('BuyProduct4').style.display = 'none';
+}
+function openAbtUs() {
+    document.getElementById('Gallery').style.display = 'none';
+    document.getElementById('Products').style.display = 'none';
+    document.getElementById('ProdServ').style.display = 'none';
+	document.getElementById('AbtUs').style.display = 'block';
+	document.getElementById('ContUs').style.display = 'none';
+	document.getElementById('Cart').style.display = 'none';
+	document.getElementById('BuyProduct1').style.display = 'none';
+	document.getElementById('BuyProduct2').style.display = 'none';
+	document.getElementById('BuyProduct3').style.display = 'none';
+	document.getElementById('BuyProduct4').style.display = 'none';
+}
+function openContUs() {
+    document.getElementById('Gallery').style.display = 'none';
+    document.getElementById('Products').style.display = 'none';
+    document.getElementById('ProdServ').style.display = 'none';
+	document.getElementById('AbtUs').style.display = 'none';
+	document.getElementById('ContUs').style.display = 'block';
+	document.getElementById('Cart').style.display = 'none';
+	document.getElementById('BuyProduct1').style.display = 'none';
+	document.getElementById('BuyProduct2').style.display = 'none';
+	document.getElementById('BuyProduct3').style.display = 'none';
+	document.getElementById('BuyProduct4').style.display = 'none';
+}
+function openCart() {
+    document.getElementById('Gallery').style.display = 'none';
+    document.getElementById('Products').style.display = 'none';
+    document.getElementById('ProdServ').style.display = 'none';
+	document.getElementById('AbtUs').style.display = 'none';
+	document.getElementById('ContUs').style.display = 'none';
+	document.getElementById('Cart').style.display = 'block';
+	document.getElementById('BuyProduct1').style.display = 'none';
+	document.getElementById('BuyProduct2').style.display = 'none';
+	document.getElementById('BuyProduct3').style.display = 'none';
+	document.getElementById('BuyProduct4').style.display = 'none';
+}
+// for buying product
+function openBuy1() {
+    document.getElementById('Gallery').style.display = 'none';
+    document.getElementById('Products').style.display = 'none';
+    document.getElementById('BuyProduct1').style.display = 'block';
+}
+function openBuy2() {
+    document.getElementById('Gallery').style.display = 'none';
+    document.getElementById('Products').style.display = 'none';
+    document.getElementById('BuyProduct2').style.display = 'block';
+}
+function openBuy3() {
+    document.getElementById('Gallery').style.display = 'none';
+    document.getElementById('Products').style.display = 'none';
+    document.getElementById('BuyProduct3').style.display = 'block';
+}
+function openBuy4() {
+    document.getElementById('Gallery').style.display = 'none';
+    document.getElementById('Products').style.display = 'none';
+    document.getElementById('BuyProduct4').style.display = 'block';
+}
+// for buying product in prodduct and service
+function openBuy5() {
+    document.getElementById('ProdServ').style.display = 'none';
+    document.getElementById('BuyProduct1').style.display = 'block';
+}
+function openBuy6() {
+    document.getElementById('ProdServ').style.display = 'none';
+    document.getElementById('BuyProduct2').style.display = 'block';
+}
+function openBuy7() {
+    document.getElementById('ProdServ').style.display = 'none';
+    document.getElementById('BuyProduct3').style.display = 'block';
+}
+function openBuy8() {
+    document.getElementById('ProdServ').style.display = 'none';
+    document.getElementById('BuyProduct4').style.display = 'block';
+}
+// for add to cart
+let CartItems = [];
+function addToCart(ProductName, Price, ImgSrc) {
+    CartItems.push({ ProductName, Price, ImgSrc });
+
+    const CartContainer = document.getElementById('CartItems');
+    CartContainer.innerHTML = '';
+
+    CartItems.forEach(Item => {
+        const CartItem = document.createElement('div');
+        CartItem.classList.add('CartItem');
+
+        CartItem.innerHTML = `
+            <img src="${Item.ImgSrc}" alt="${Item.ProductName}">
+            <span>${Item.ProductName} - $${Item.Price}</span>
+        `;
+
+        CartContainer.appendChild(CartItem);
+    });
+}
+function openBuy() {
+    if (CartItems.length === 0) {
+        alert("Your shopping cart is empty!");
+    } else {
+        let TotalCost = 0;
+        CartItems.forEach(Item => {
+            TotalCost += Item.Price;
+        });
+
+        const Confirmation = confirm("Are you sure you want to buy all items? Total cost: $" + TotalCost);
+        if (Confirmation) {
+            alert("Thank you for your purchase!");
+            window.location.href = "website.html";
+        }
+    }
+}
+function openClear() {
+    if (CartItems.length === 0) {
+        alert("Your shopping cart is empty!");
+    } else {
+        const Confirm = confirm("Are you sure you want to clear your shopping list");
+        if (Confirm === true) {
+            CartItems = []; 
+            const CartContainer = document.getElementById('CartItems');
+            CartContainer.innerHTML = '';
+        }
+    }
+}
+</script>
+</body>
+</html>
